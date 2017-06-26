@@ -19,7 +19,7 @@ namespace MVC5Practice.Controllers
 
         }
 
-
+        [Route("Movies/News/{year:regex(\\d{4}):range(2000,2018)}/{month:regex(\\d{2})}")]
         public ActionResult NewsByDate(int year , int month)
         {
             return Content($"Year={year}&Month={month}");

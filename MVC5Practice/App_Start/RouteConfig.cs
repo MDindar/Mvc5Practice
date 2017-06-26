@@ -13,12 +13,13 @@ namespace MVC5Practice
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes comes with most specific one to the general one
-            routes.MapRoute(
-                "MovieNews",
-                "Movies/News/{year}/{month}",
-                new {controller = "Movies", action = "NewsByDate"},
-                new {year = @"20\d{2}", month = @"\d{2}"});
+            routes.MapMvcAttributeRoutes();
+            ////routes comes with most specific one to the general one
+            //routes.MapRoute(
+            //    "MovieNews",
+            //    "Movies/News/{year}/{month}",
+            //    new {controller = "Movies", action = "NewsByDate"},
+            //    new {year = @"20\d{2}", month = @"\d{2}"});
 
 
             routes.MapRoute(
